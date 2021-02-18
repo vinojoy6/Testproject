@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Analysis</title>
+		<style>
+			table,
+			th,
+			td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				margin: 5px;
+			}
+			.vertical-center {
+				position: absolute;
+				right: 300px;
+				top: 5px;
+			}
+		</style>
+		<h1>EJS page</h1>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th style="width: 50px">Date</th>
+				<th style="width: 4px"></th>
+				<th style="width: 400px">Script Name</th>
+				<th style="width: 4px"></th>
+				<th style="width: 150px">NYSE Code</th>
+				<th style="width: 4px"></th>
+				<th style="width: 100px">Method</th>
+				<th style="width: 4px"></th>
+				<th style="width: 100px">Price/s</th>
+				<th style="width: 4px"></th>
+				<th style="width: 100px">Quantity</th>
+			</tr>
+			<tr>
+				<td width="150" height="25" id="Date"><%= andat %></td>
+				<td style="width: 4px"></td>
+				<td style="width: 150px" id="Tcname"></td>
+				<td style="width: 4px"></td>
+				<td style="width: 100px" id="Tcode"><%= ancod %></td>
+				<td style="width: 4px"></td>
+				<td style="width: 100px" id="Tmethod"><%=anmeth %></td>
+				<td style="width: 4px"></td>
+				<td style="width: 100px" id="Tprice"><%= anpric %></td>
+				<td style="width: 4px"></td>
+				<td style="width: 100px" id="Tqty"><%= anqt %></td>
+			</tr>
+		</table>
+		<form action="/" class="vertical-center">
+			<input type="submit" value="Go to Home Page" />
+		</form>
+	</body>
+</html>

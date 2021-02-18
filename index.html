@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>vino</title>
+		<style>
+			table,
+			th,
+			td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				margin: 5px;
+			}
+
+			form {
+				margin: 5px;
+			}
+
+			input[type="text"]:hover {
+				border-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>New Share</h1>
+		<table>
+			<tr>
+				<th style="width: 150px">Date</th>
+				<th style="width: 4px"></th>
+				<th style="width: 404px">Name</th>
+				<th style="width: 4px"></th>
+				<th style="width: 150px">NYSE Code</th>
+			</tr>
+		</table>
+		<!--  <tr> -->
+		<form method="POST" action="/Submit" name="Form1">
+			<input style="width: 150px" type="Date" name="fname" id="sdate" />
+			<input style="width: 400px" type="text" name="nname" id="sname" />
+			<input style="width: 150px" type="text" name="cname" id="cname" />
+			<div>
+				<input type="Submit" value="Submit" id="Submit" />
+			</div>
+		</form>
+		<!--  </tr> -->
+		<h1>Update Todays values</h1>
+		<table>
+			<tr>
+				<th style="width: 150px">Date</th>
+				<th style="width: 4px"></th>
+				<th style="width: 100px">Method</th>
+				<th style="width: 4px"></th>
+				<th style="width: 150px">NYSE Code</th>
+				<th style="width: 4px"></th>
+				<th style="width: 100px">Price/s</th>
+				<th style="width: 4px"></th>
+				<th style="width: 100px">Quantity</th>
+			</tr>
+		</table>
+		<!-- <tr> -->
+		<form method="POST" action="/Submit3" name="Form2">
+			<input style="width: 150px" type="Date" name="udname" id="udate" />
+			<input
+				list="browsers"
+				style="width: 100px"
+				type="text"
+				name="umname"
+				id="umname"
+			/>
+			<input style="width: 150px" type="text" name="ucname" id="ucname" />
+			<input style="width: 100px" type="number" name="upname" id="upname" />
+			<input style="width: 100px" type="number" name="uqname" id="uqname" />
+			<datalist id="browsers">
+				<option value="BUY"></option>
+				<option value="SELL"></option>
+			</datalist>
+			<div>
+				<input type="Submit" value="Submit" id="Submit3" />
+			</div>
+		</form>
+		<h1>Analysis</h1>
+		<form method="post" action="/AnaSubmit">
+			<!-- 		<form method="post" action="table.js"></form>-->
+			<input style="width: 150px" type="text" name="acname" id="acname" />
+			<div>
+				<input type="Submit" value="Search Script" id="Submit5" />
+			</div>
+		</form>
+
+		<!--   </tr> -->
+
+		<script src="vscript.js"></script>
+		<script type="module" src="././add.js"></script>
+		<!-- 	<script type="module" src="app.js"></script> -->
+		<script type="module" src="././dbconn.js"></script>
+	</body>
+</html>
